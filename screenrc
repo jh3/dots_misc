@@ -1,0 +1,14 @@
+shell -${SHELL}
+altscreen on
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kw}[ %{C}%H %{w}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{w}][%{r} %m-%d %{C} %C%A %{w}]'
+hardstatus string "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %c"
+startup_message off
+vbell off
+
+screen -t shell 0 zsh
+screen -t zsh  1 zsh
+screen -t zsh  2 zsh
+screen -t zsh  3 zsh
+select 0
