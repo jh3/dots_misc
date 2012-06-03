@@ -1,0 +1,9 @@
+selectp -t 0                # Select pane 0
+splitw -h -p 70 'ssh jeos'  # Split pane 0 vertically by 70% and login to the VM
+selectp -t 0                # Select pane 1
+splitw -v -p 50             # Split pane 1 horizontally by 50%
+selectp -t 0                # Select pane 0
+send-keys 'ssh jeos' 'C-m'  # Login to the VM
+new-window                  # Create a new window
+select-window -t :1         # Select the new window
+send-keys 'v' 'C-m'       # Open vim in the new window
